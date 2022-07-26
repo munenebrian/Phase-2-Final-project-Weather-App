@@ -9,6 +9,18 @@ const getWeatherData = (infoType, searchParams) => {
     .then((res)=> res.json())
 };
 
+const formatCurrentWeather = (data) => {
+ const {
+    coord: {lat, lon},
+    main: {temp, feels_like, temp_min, temp_max, humidity},
+    name,
+    dt,
+    sys: {country, sunrise, sunset},
+    weather,
+    wind: {speed}
+ } = data
+}
+
 const getFormattedWeatherData = (searchParams) => {
-    const formattedCurrentWeather = await getWeatherData('weather')
+    const formattedCurrentWeather = await getWeatherData('weather', searchParams).then(formatCurrentWeather)
 }
