@@ -4,7 +4,7 @@ import { UilSearch, UilLocationPoint } from '@iconscout/react-unicons'
 function Inputs({setQuery, units, setUnits}) {
   const [city, setCity] = useState("");
 
-  const handleUnitsChange = () => {
+  const handleUnitsChange = (e) => {
     const selectedUnit = e.currentTarget.name
     if (units !== selectedUnit) setUnits(selectedUnit);
   }

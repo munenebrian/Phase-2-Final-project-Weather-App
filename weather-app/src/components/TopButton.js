@@ -9,14 +9,14 @@ function TopButton({setQuery}) {
         },
         {
             id:2,
-            title:'Burundi'
+            title:'Costa Rica'
         },{
             id:3,
             title:'Tokyo'
         },
         {
             id:4,
-            title:'Toronto'
+            title:'Burundi'
         },
         {
             id:5,
