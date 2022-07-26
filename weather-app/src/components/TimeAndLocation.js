@@ -1,6 +1,6 @@
 import React from 'react'
 
-function TimeAndLocation() {
+function TimeAndLocation({weather: {dt, timezone, name, country}}) {
   return (
     <div>
         <div className="flex items-center justify-center my-6">
@@ -10,7 +10,7 @@ function TimeAndLocation() {
         </div>
         <div className="flex items-center justify-center my-3">
             <p className="text-white text-3xl font-medium">
-                Berlin, DE
+                {`${name}, ${country}`}
             </p>
         </div>
     </div>
