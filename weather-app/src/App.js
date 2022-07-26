@@ -31,11 +31,15 @@ function App() {
       <TopButton/>
       <Inputs/>
 
+      {weather && (
+        <div>
       <TimeAndLocation/>
       <TemperatureAndDetails/>
 
       <Forecast title="hourly forecast"/>
       <Forecast title="daily forecast"/>
+        </div>
+      )}
     </div>
   );
 }
